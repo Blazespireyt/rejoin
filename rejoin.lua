@@ -1,8 +1,5 @@
-local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
-local player = Players.LocalPlayer
-local placeId = game.PlaceId
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
 
-script.Parent.MouseButton1Click:Connect(function()
-    TeleportService:Teleport(placeId, player)
-end)
+TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, LocalPlayer)
